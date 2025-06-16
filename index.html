@@ -5,128 +5,197 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sahil Murmure | Portfolio</title>
   <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-light: #1e293b;
+      --accent: #14b8a6;
+      --accent-hover: #0d9488;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: #121212;
-      color: #f4f4f4;
-      font-family: Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
     }
+
     header {
-      background-color: #1e1e1e;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
+      background-color: var(--bg-light);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
-    section {
-      padding: 40px 20px;
+
+    header h1 {
+      margin: 0;
+      color: var(--accent);
+      font-size: 1.5rem;
     }
-    h2 {
-      border-bottom: 2px solid #555;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-    .bio {
-      font-size: 18px;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .projects, .experience {
-      display: grid;
-      gap: 30px;
-    }
-    .project, .job {
-      background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .project h3, .job h3 {
-      margin-top: 0;
-    }
-    .github-button {
-      margin-top: 10px;
-      display: inline-block;
-      padding: 8px 12px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
+
+    nav a {
+      color: var(--text-muted);
+      margin-left: 1.5rem;
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
     }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project, .experience {
+      background-color: var(--bg-light);
+      margin: 1rem 0;
+      padding: 1.2rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover, .experience:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .github-button, .resume-button, .top-button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-top: 0.8rem;
+      background-color: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .github-button:hover, .resume-button:hover, .top-button:hover {
+      background-color: var(--accent-hover);
+      box-shadow: 0 0 10px var(--accent);
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #1e1e1e;
-      color: #aaa;
+      padding: 1rem;
+      background-color: var(--bg-light);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .top-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 0.5rem 0 0 0;
+        display: block;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    Sahil Murmure
-  </header>
+<header>
+  <h1>Sahil Murmure</h1>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section class="bio">
-    Aspiring Data Analyst with a strong foundation in data visualization, web development, and Python-based analytics. Passionate about transforming raw data into actionable insights.
-  </section>
+<section id="bio">
+  <h2>About Me</h2>
+  <p>A passionate Data Analyst who enjoys transforming raw datasets into meaningful insights and dashboards. Driven by curiosity and always ready to learn.</p>
+</section>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="projects">
+<section id="projects">
+  <h2>Projects</h2>
 
-      <div class="project">
-        <h3>Modi Script Character Recognition</h3>
-        <p>A Python-based web application using Flask and CNN to identify handwritten characters of the historic Modi script. Designed to preserve cultural heritage through digitization.</p>
-        <a class="github-button" href="https://github.com/sahil6ooo/MODI-Script-Character-Recognition" target="_blank">View on GitHub</a>
-      </div>
+  <div class="project">
+    <h3>MODI Script Character Recognition</h3>
+    <p>A Python Flask web app to recognize ancient Modi script characters using CNN, aimed at cultural preservation.</p>
+    <a class="github-button" href="https://github.com/sahil6ooo/MODI-Script-Character-Recognition" target="_blank">View on GitHub</a>
+  </div>
 
-      <div class="project">
-        <h3>COVID-19 Data Analysis</h3>
-        <p>Performed comprehensive analysis of COVID-19 datasets using Python, Pandas, and Matplotlib. Explored case trends, vaccination impact, and visualized results effectively.</p>
-        <a class="github-button" href="https://github.com/sahil6ooo/COVID-19-Data-Analysis" target="_blank">View on GitHub</a>
-      </div>
+  <div class="project">
+    <h3>COVID-19 Data Analysis</h3>
+    <p>Performed EDA and visualizations on COVID-19 datasets using Python and Matplotlib to analyze trends and mortality rates.</p>
+    <a class="github-button" href="https://github.com/sahil6ooo/COVID-19-Data-Analysis" target="_blank">View on GitHub</a>
+  </div>
 
-      <div class="project">
-        <h3>ManageJob Features</h3>
-        <p>Backend development for job platform ManageJob using Flask and React.js. Built features like email automation, bulk messaging, and communication integrations.</p>
-        <a class="github-button" href="https://github.com/sahil6ooo/ManageJob-Features" target="_blank">View on GitHub</a>
-      </div>
+  <div class="project">
+    <h3>ManageJob Communication Features</h3>
+    <p>Built backend features for candidate messaging using Flask, integrated with a React frontend for seamless HR communication.</p>
+    <a class="github-button" href="https://github.com/sahil6ooo/ManageJob-Features" target="_blank">View on GitHub</a>
+  </div>
+</section>
 
-    </div>
-  </section>
+<section id="experience">
+  <h2>Work Experience</h2>
 
-  <section>
-    <h2>Experience</h2>
-    <div class="experience">
+  <div class="experience">
+    <h3>Software Developer & SEO Intern - Salahkaar Consultants</h3>
+    <p><strong>Jan 2025 – Jun 2025</strong><br>
+      Contributed to Android and web development (Flutter, React.js, JavaScript, PostgreSQL). Assisted with SEO and product testing for the ManageJob platform.</p>
+  </div>
 
-      <div class="job">
-        <h3>Software Developer & SEO Intern – Salahkaar Consultants</h3>
-        <p><strong>January 2025 – June 2025</strong></p>
-        <ul>
-          <li>Worked on developing the ManageJob Android app and software platform using Flutter and React.js.</li>
-          <li>Utilized PostgreSQL for database, JavaScript for backend, and contributed to frontend and SEO optimization.</li>
-          <li>Demonstrated dedication, fast learning, and smart problem-solving throughout the internship.</li>
-        </ul>
-      </div>
+  <div class="experience">
+    <h3>Data Analyst Intern - Growstone Ventures</h3>
+    <p><strong>Jun 2024 – Aug 2024</strong><br>
+      Analyzed construction project data for performance and cost optimization using Python, Excel, and Tableau. Delivered key insights through visual dashboards.</p>
+  </div>
+</section>
 
-      <div class="job">
-        <h3>Data Analyst Intern – Growstone Ventures</h3>
-        <p><strong>June 2024 – August 2024</strong></p>
-        <ul>
-          <li>Analyzed construction data for performance trends and cost optimization strategies.</li>
-          <li>Used Python, Excel, and domain-specific tools to generate detailed reports.</li>
-          <li>Created insightful data visualizations in Tableau to support decision-making.</li>
-        </ul>
-      </div>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out: <a href="mailto:sahilmurmure4141@gmail.com">sahilmurmure4141@gmail.com</a></p>
+  <a class="resume-button" href="/resume.pdf" download>Download Resume</a>
+</section>
 
-    </div>
-  </section>
+<a href="#" class="top-button">⬆ Top</a>
 
-  <footer>
-    &copy; 2025 Sahil Murmure | sahilmurmure4141@gmail.com
-  </footer>
+<footer>
+  <p>© 2025 Sahil Murmure. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
