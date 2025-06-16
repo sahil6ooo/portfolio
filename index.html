@@ -3,81 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sahil Murmure - Portfolio</title>
+  <title>Sahil Murmure | Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0f172a;
-      color: white;
       margin: 0;
-      padding: 0;
-    }
-    .container {
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #111827;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 40px 20px;
     }
+
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #facc15;
+      margin-bottom: 10px;
     }
+
     p {
       font-size: 1.2rem;
       color: #cbd5e1;
+      margin-bottom: 30px;
+      text-align: center;
       max-width: 600px;
-      margin: 20px auto;
     }
+
     .projects {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
+      margin-top: 30px;
+      width: 100%;
+      max-width: 800px;
     }
+
     .project {
-      background-color: #1e293b;
+      background-color: #1f2937;
       padding: 20px;
-      border-radius: 10px;
-      max-width: 600px;
-      width: 90%;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
-    .project h2 {
-      color: #fbbf24;
+
+    .project h3 {
+      color: #facc15;
+      margin-bottom: 10px;
     }
+
+    .project p {
+      color: #e5e7eb;
+      margin-bottom: 10px;
+    }
+
     .project a {
       color: #38bdf8;
       text-decoration: none;
     }
-    .footer {
-      text-align: center;
-      padding: 20px;
+
+    .resume-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #facc15;
+      color: black;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .resume-button:hover {
+      background-color: #eab308;
+    }
+
+    footer {
+      margin-top: 40px;
       font-size: 0.9rem;
-      background-color: #0f172a;
-      color: #64748b;
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Sahil Murmure</h1>
-    <p>I love to learn and build scalable and optimized web applications using Python, Flask, and Data Science tools.</p>
+  <h1>Hi, I'm Sahil Murmure</h1>
+  <p>I love building scalable web apps and working with data. Here's a collection of my work and projects.</p>
 
-    <div class="projects">
-      <div class="project">
-        <h2>Modi Script Character Recognition</h2>
-        <p>A deep learning web application built using Flask and CNNs to recognize handwritten characters from the ancient Modi script, aiding preservation and translation.</p>
-        <p><em>GitHub: Coming Soon</em></p>
-      </div>
+  <div class="projects">
+    <div class="project">
+      <h3>📝 Modi Script Character Recognition</h3>
+      <p>A Flask-based web app using CNN to digitize handwritten Modi script characters.</p>
+      <a href="https://github.com/sahil6ooo/modi-script-recognition" target="_blank">View on GitHub</a>
+    </div>
 
-      <div class="project">
-        <h2>COVID-19 Data Analysis</h2>
-        <p>Analyzed real-world COVID-19 datasets using Pandas, NumPy, and Matplotlib to uncover patterns in infection, mortality, and recovery trends globally.</p>
-        <p><em>GitHub: Coming Soon</em></p>
-      </div>
+    <div class="project">
+      <h3>📊 COVID-19 Data Analysis</h3>
+      <p>Analyzed real-time COVID data using Pandas, Matplotlib, and Plotly for insightful visualizations.</p>
+      <a href="https://github.com/sahil6ooo/covid-data-analysis" target="_blank">View on GitHub</a>
     </div>
   </div>
 
-  <div class="footer">
-    &copy; 2025 Sahil Murmure | sahilmurmure4141@gmail.com
-  </div>
+  <a href="resume.pdf" download class="resume-button">Download My Resume</a>
+
+  <footer>
+    <p>© 2025 Sahil Murmure</p>
+  </footer>
 </body>
 </html>
