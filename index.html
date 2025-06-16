@@ -2,27 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahil Murmure - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f172a;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #facc15;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .projects {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .project {
+      background-color: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+    }
+    .project h2 {
+      color: #fbbf24;
+    }
+    .project a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #0f172a;
+      color: #64748b;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
-    <p>I build scalable and optimized web applications.</p>
-  </header>
+  <div class="container">
+    <h1>Sahil Murmure</h1>
+    <p>I love to learn and build scalable and optimized web applications using Python, Flask, and Data Science tools.</p>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/yourname/project1" target="_blank">🛠 Project 1</a></li>
-      <li><a href="https://github.com/yourname/project2" target="_blank">📊 Project 2</a></li>
-      <li><a href="https://github.com/yourname/project3" target="_blank">📱 Project 3</a></li>
-    </ul>
-  </section>
+    <div class="projects">
+      <div class="project">
+        <h2>Modi Script Character Recognition</h2>
+        <p>A deep learning web application built using Flask and CNNs to recognize handwritten characters from the ancient Modi script, aiding preservation and translation.</p>
+        <p><em>GitHub: Coming Soon</em></p>
+      </div>
 
-  <footer>
-    <p>© 2025 Your Name • <a href="https://www.linkedin.com/in/yourprofile/">LinkedIn</a></p>
-  </footer>
+      <div class="project">
+        <h2>COVID-19 Data Analysis</h2>
+        <p>Analyzed real-world COVID-19 datasets using Pandas, NumPy, and Matplotlib to uncover patterns in infection, mortality, and recovery trends globally.</p>
+        <p><em>GitHub: Coming Soon</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sahil Murmure | sahilmurmure4141@gmail.com
+  </div>
 </body>
 </html>
